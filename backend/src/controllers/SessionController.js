@@ -8,7 +8,7 @@ module.exports = {
         let user = await User.findOne({ email });
 
         if(!user) {
-          const  user = await User.create({ email });
+          user = await User.create({ email });
         }
 
         return res.json(user);

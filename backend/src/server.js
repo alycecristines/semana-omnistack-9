@@ -4,9 +4,9 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb://omnistack:omnistack@omnistack-shard-00-00-p1690.gcp.mongodb.net:27017,omnistack-shard-00-01-p1690.gcp.mongodb.net:27017,omnistack-shard-00-02-p1690.gcp.mongodb.net:27017/admin?ssl=true&replicaSet=omnistack-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect('mongodb://omnistack:omnistack@omnistack-shard-00-00-azme9.mongodb.net:27017,omnistack-shard-00-01-azme9.mongodb.net:27017,omnistack-shard-00-02-azme9.mongodb.net:27017/semana09?ssl=true&replicaSet=omnistack-shard-0&authSource=admin&retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
 //GET (buscar), POST (criar), PUT(alterar), DELETE(deletar)
@@ -18,5 +18,4 @@ mongoose.connect('mongodb://omnistack:omnistack@omnistack-shard-00-00-p1690.gcp.
 app.use(express.json());
 app.use(routes);
 
-
-app.listen(3334);
+app.listen(3333);
