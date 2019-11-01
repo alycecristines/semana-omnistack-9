@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
 
-export default function Login() {
+export default function Login({ history }) {
     const [email, setEmail] = useState('');
 
     async function handleSubmit(e) {
@@ -11,6 +11,8 @@ export default function Login() {
         
         const { _id } = response.data;
         localStorage.setItem('user', _id);
+
+        history.push('/dashboard');
     }
 
     return (
@@ -32,5 +34,5 @@ export default function Login() {
                 <button className="btn" type="submit">Entrar</button>
             </form>
         </>
-    )
+    );
 }
