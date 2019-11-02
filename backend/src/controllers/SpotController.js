@@ -8,8 +8,8 @@ module.exports = {
         const spots = await Spot.find({ techs: tech});
         return res.json(spots);
     },
-
     async store(req, res) {
+       
         const { filename } = req.file;
         const { company, price, techs } = req.body;
         const { user_id } = req.headers;

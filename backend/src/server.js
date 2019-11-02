@@ -6,7 +6,7 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb://omnistack:omnistack@omnistack-shard-00-00-azme9.mongodb.net:27017,omnistack-shard-00-01-azme9.mongodb.net:27017,omnistack-shard-00-02-azme9.mongodb.net:27017/semana09?ssl=true&replicaSet=omnistack-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect('mongodb://omnistack:omnistack@omnistack-shard-00-00-azme9.mongodb.net:27017,omnistack-shard-00-01-azme9.mongodb.net:27017,omnistack-shard-00-02-azme9.mongodb.net:27017/test?ssl=true&replicaSet=omnistack-shard-0&authSource=admin&retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
